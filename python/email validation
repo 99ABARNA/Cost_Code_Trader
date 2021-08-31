@@ -1,0 +1,30 @@
+s = str(input())
+at = "@"
+nd = "&"
+start = s.find("@") + len("@")
+end = s.find('.')
+sub = s[start:end]
+len_sub = len(sub)
+end = s.find("@")
+sub1 = s[:end]
+len_sub1 = len(sub1)
+if at in s:
+    print("YES")
+    if (s.count("@") == 1) or (s.count("&") == 1):
+        print("YES count")
+        if (len_sub >= 4):
+            print("YES len")
+            if(len_sub1 >= 3):
+                print("YES len1")
+                if(s[-4:] == '.com'):
+                    print("YES")
+                else:
+                    print("NO")
+            else:
+                print("NO")
+        else:
+            print("NO")
+    else:
+        print("NO")
+else:
+    print("NO")
